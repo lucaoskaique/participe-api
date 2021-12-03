@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  server:
+    build: .
+    container_name: participe-api
+    restart: always
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/usr/app
+    links:
+      - mysql
+    depends_on:
+      - mysql
+
+  mysql:
+    restart: always
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "participe"
+      MYSQL_DATABASE: "participebd"
+    ports:
+      - "3306:3306"
+    container_name: database
+    volumes:
+      - ./.docker/mysql/data:/var/lib/mysql
+      - ./.docker/mysql:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping" ]
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8090:80"
+    environment:
+      - PMA_HOST=mysql
+    depends_on:
+      - mysql
+
+volumes:
+  participe-mysql:
+    driver: local

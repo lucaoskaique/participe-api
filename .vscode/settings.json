@@ -1,5 +1,14 @@
 {
   "cSpell.words": [
-    "camelcase"
-  ]
+    "camelcase",
+    "respawn"
+  ],
+  "cSpell.customDictionaries": {
+    "custom-dictionary-workspace": {
+      "name": "custom-dictionary-workspace",
+      "path": "${workspaceFolder:participe-api}/.cspell/custom-dictionary-workspace.txt",
+      "addWords": true,
+      "scope": "workspace"
+    }
+  }
 }

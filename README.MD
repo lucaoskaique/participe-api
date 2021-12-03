@@ -1,7 +1,7 @@
-# api-calculo-nps
-API feita na NLW04 da Rocketseat
+# api-projeto-participe
+API feita para projeto da disciplina de banco de dados
 
-<h1 align="center">NPS API (Next Level Week - 🚀 Rocketseat)</h1>
+<h1 align="center">PARTICIPE - Sistema para emendas participativas governamentais</h1>
 <p align="center">
   API desenvolvida em NodeJS
   

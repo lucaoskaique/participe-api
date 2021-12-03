@@ -7,6 +7,7 @@ class Project {
   end_date: Date;
   votes: number;
   goal: number;
+  value: number;
   project_status_id: number;
   user_id: number;
   created_at: Date;
